@@ -1,0 +1,32 @@
+{
+  "name": "WordPress-Composer-Example",
+  "description": "",
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "pantheon-systems/wordpress",
+        "version": "4.7.2",
+        "dist": {
+          "url": "https://github.com/pantheon-systems/WordPress/archive/4.7.2.zip",
+          "type": "zip"
+        },
+        "source": {
+          "url": "git@github.com:pantheon-systems/WordPress.git",
+          "type": "git",
+          "reference": "4.7.2"
+        },
+        "type": "wordpress-core",
+        "require": {
+          "johnpbloch/wordpress-core-installer": "~0.1"
+        },
+        "extra": {
+          "wordpress-install-dir": "web/wp"
+        }
+      }
+    }
+  ],
+  "require": {
+    "pantheon-systems/wordpress": "^4.7.2"
+  }
+}
