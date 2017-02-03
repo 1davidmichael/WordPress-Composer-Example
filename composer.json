@@ -1,7 +1,22 @@
 {
   "name": "WordPress-Composer-Example",
   "description": "",
+  "version": "0.1.0",
+  "type": "project",
+  "keywords": [],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Andrew Taylor",
+      "email": "andrew@ataylor.me",
+      "homepage": "http://www.ataylor.me"
+    }
+  ],
   "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
     {
       "type": "package",
       "package": {
@@ -27,6 +42,28 @@
     }
   ],
   "require": {
-    "pantheon-systems/wordpress": "^4.7.2"
+    "php": ">=5.2",
+    "composer/installers": "~1.0",
+    "wpackagist-plugin/wp-native-php-sessions": "^0.6.0",
+    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.1.2",
+    "wpackagist-plugin/wp-cfm": "^1.4.5",
+    "wpackagist-theme/twentyseventeen": "^1.1",
+    "pantheon-systems/wordpress": "^4.7.2",
+    "roots/wp-password-bcrypt": "^1.0.0"
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
   }
 }
