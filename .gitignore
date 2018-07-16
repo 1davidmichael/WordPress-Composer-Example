@@ -25,6 +25,7 @@ web/wp-content/themes/*
 !.gitignore
 !.env-sample
 !.travis.yml
+!.circleci/
 
 # NPM Modules #
 ###############
