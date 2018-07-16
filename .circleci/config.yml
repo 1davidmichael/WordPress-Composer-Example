@@ -22,7 +22,9 @@ jobs:
 
       - run:
           name: create artifact zip
-          command: zip -r /tmp/artifact.zip ./web
+          command: |
+            apk --no-cache add zip
+            zip -r /tmp/artifact.zip ./web
 
       - store_artifacts:
           path: /tmp/artifact.zip
