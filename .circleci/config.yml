@@ -19,3 +19,10 @@ jobs:
           key: composer-cache
           paths:
             - $HOME/.composer/cache
+
+      - run:
+          name: create artifact zip
+          command: zip -r /tmp/artifact.zip ./web
+
+      - store_artifacts:
+          path: /tmp/artifact.zip
